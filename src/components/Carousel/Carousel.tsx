@@ -28,7 +28,7 @@ export const Carousel = ({ slides }: Props) => {
   }
 
   return (
-    <Card>
+    <Card sx={{ height: '100%' }}>
       <div className='carousel'>
         <div className='carousel__controls'>
           <div className='carousel__arrow carousel__arrow--left' onClick={prevSlide}>
