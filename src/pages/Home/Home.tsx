@@ -3,6 +3,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Carousel } from '../../components/Carousel/Carousel'
+import { Table } from '../../components/Table/Table'
 import { useAuth } from '../../context/AuthProvider'
 import { useNotification } from '../../context/NotificationProvider'
 import { MyFinances } from './MyFinances'
@@ -53,6 +54,88 @@ export const Home = () => {
         </Grid>
         <Grid item xs={12} lg={4}>
           <MyFinances />
+        </Grid>
+
+        <Grid item xs={12} lg={8}>
+          <Card sx={{ padding: '20px' }}>
+            <Typography variant='h4' sx={{ marginBottom: '20px' }}>
+              Мої замовлення
+            </Typography>
+            <Table
+              columns={[
+                'Номер замовлення',
+                'Дата замовлення',
+                'Сума замовлення',
+                'Статус замовлення',
+                'Деталі',
+              ]}
+              rows={[
+                [
+                  '1',
+                  '2021-10-10',
+                  '1000',
+                  'Оплачено',
+                  <Button variant='contained' color='primary'>
+                    Деталі
+                  </Button>,
+                ],
+                [
+                  '2',
+                  '2021-10-10',
+                  '1000',
+                  'Оплачено',
+                  <Button variant='contained' color='primary'>
+                    Деталі
+                  </Button>,
+                ],
+                [
+                  '3',
+                  '2021-10-10',
+                  '1000',
+                  'Оплачено',
+                  <Button variant='contained' color='primary'>
+                    Деталі
+                  </Button>,
+                ],
+                [
+                  '4',
+                  '2021-10-10',
+                  '1000',
+                  'Оплачено',
+                  <Button variant='contained' color='primary'>
+                    Деталі
+                  </Button>,
+                ],
+                [
+                  '5',
+                  '2021-10-10',
+                  '1000',
+                  'Оплачено',
+                  <Button variant='contained' color='primary'>
+                    Деталі
+                  </Button>,
+                ],
+                [
+                  '6',
+                  '2021-10-10',
+                  '1000',
+                  'Оплачено',
+                  <Button variant='contained' color='primary'>
+                    Деталі
+                  </Button>,
+                ],
+                [
+                  '7',
+                  '2021-10-10',
+                  '1000',
+                  'Оплачено',
+                  <Button variant='contained' color='primary'>
+                    Деталі
+                  </Button>,
+                ],
+              ]}
+            />
+          </Card>
         </Grid>
         <Grid item xs={12} lg={4}>
           <Link to={'/login'}>login</Link>
