@@ -5,7 +5,7 @@ import { Header } from './components/layout/Header'
 import { NotificationsOverlay } from './components/NotificationsOverlay'
 import { useAuth } from './context/AuthProvider'
 import { useNotification } from './context/NotificationProvider'
-
+import './App.scss'
 export const App = () => {
   const { addNotification } = useNotification()
   const { logged, logout } = useAuth()

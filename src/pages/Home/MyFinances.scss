@@ -1,0 +1,30 @@
+.finances {
+  height: 100%;
+  padding: 1.8em;
+  text-align: center;
+  &__title {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  &__sum {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  &__last-income {
+    font-size: 14px;
+    margin: 0 0 1rem;
+  }
+  &__navigation {
+    &-button {
+      & button {
+        width: 80%;
+        font-size: 0.7rem;
+      }
+      margin-bottom: 0.3rem;
+    }
+  }
+}

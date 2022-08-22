@@ -1,11 +1,47 @@
 .carousel {
   width: 100%;
+  position: relative;
   height: 100%;
+  overflow: hidden;
+  &__arrow {
+    width: 15%;
+    display: flex;
+    display: block;
+    position: absolute;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    &-icon {
+      transform: scale(1.6);
+      position: absolute;
+      color: gray;
+      opacity: 0.8;
+      display: flex;
+      top: 44%;
+    }
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+  }
   &__item {
     display: none;
+
     &--active {
       display: inline;
       opacity: 1;
     }
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
